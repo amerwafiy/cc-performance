@@ -8,7 +8,7 @@ from PIL import Image
 import matplotlib.pyplot as plt
 from colour import Color
 
-image = Image.open('/Users/amerwafiy/Desktop/cc-monitoring/invoke_logo.jpg')
+image = Image.open('invoke_logo.jpg')
 st.sidebar.title('Call Centre Monitoring Sytem')
 st.sidebar.image(image)
 option1 = st.sidebar.selectbox('Select option', ('Daily', 'Day-to-Day'))
@@ -38,7 +38,7 @@ def to_excel(df):
     return processed_data
 
 if option1 == 'Daily':
-    st.image('/Users/amerwafiy/Desktop/cc-monitoring/cc-points.png')
+    st.image('cc-points.png')
     number = st.number_input('Select number of campaign(s)', min_value = 1)
     dfs = []
     for i in range(number):
