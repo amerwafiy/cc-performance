@@ -18,7 +18,7 @@ hide_st_style = """
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
 image = Image.open('invoke_logo.jpg')
-st.sidebar.title('Call Centre Performance Tracker')
+st.sidebar.title('Call Centre Performance Tracker 2.0')
 st.sidebar.image(image)
 option1 = st.sidebar.selectbox('Select option', ('Daily', 'Day-to-Day'))
 
