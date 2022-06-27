@@ -8,6 +8,15 @@ from PIL import Image
 import matplotlib.pyplot as plt
 from colour import Color
 
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
+
 image = Image.open('invoke_logo.jpg')
 st.sidebar.title('Call Centre Monitoring Sytem')
 st.sidebar.image(image)
