@@ -47,7 +47,7 @@ def to_excel(df):
     return processed_data
 
 if option1 == 'Daily':
-    st.image('cc-points.png')
+    st.image('cc-point-system.png')
     number = st.number_input('Select number of campaign(s)', min_value = 1)
     dfs = []
     for i in range(number):
