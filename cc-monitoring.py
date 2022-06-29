@@ -102,8 +102,8 @@ if option1 == 'Daily':
 
                         if isinstance(a, pd.DataFrame) and isinstance(b, pd.DataFrame):
                             df = pd.merge(df1,df2,on='Agent',how='inner')
-                            df['Calls Attempted'] = [int(x) if math.isnan(x) == False else math.nan for x in df['Calls Attempted']]
-                            df['CR'] = [int(x) if math.isnan(x) == False else math.nan for x in df['CR']]
+                            df['Calls Attempted'] = [int(x) if math.isnan(x) == False else 0 for x in df['Calls Attempted']]
+                            df['CR'] = [int(x) if math.isnan(x) == False else 0 for x in df['CR']]
                             df['Calls-CR'] = df['Calls Attempted'] - df['CR']
                             if cat == 'A':
                                 #df['Points'] = (df['Calls-CR'] // 50 * 10) + (df['CR'] * 10)
