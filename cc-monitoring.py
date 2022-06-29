@@ -66,7 +66,7 @@ if option1 == 'Daily':
                 agents = list(a['Agent Username'].unique())
                 dates = list(a['Call Start DT'].unique())
                 if len(dates) > 1:
-                    st.error('Please ONLY upload call logs by day')
+                    st.error('Please ONLY upload call logs from ONE day')
                 else:
                     calls = [len(a[a['Agent Username'] == x]) for x in agents]
                     avg_dur = [sum(a[a['Agent Username'] == x]['Call Dur Connected']) / len(a[a['Agent Username'] == x]) for x in agents]
@@ -89,7 +89,7 @@ if option1 == 'Daily':
                     agents = list(b[col2].unique())
                     dates = list(b[col3].unique())
                     if len(dates) > 1:
-                        st.error('Please ONLY upload call logs by day')
+                        st.error('Please ONLY upload call logs for ONE day')
                     else:
                         if col1 == 'Row counts':
                             df2 = pd.DataFrame({'Agent': list(dict(b[col2].value_counts()).keys()), 'CR': list((b[col2].value_counts())) })
